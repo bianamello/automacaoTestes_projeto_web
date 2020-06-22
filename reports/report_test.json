@@ -1,0 +1,125 @@
+[
+  {
+    "uri": "features/specs/login.feature",
+    "id": "login",
+    "keyword": "Funcionalidade",
+    "name": "Login",
+    "description": "    COMO um usuário previamente cadastrado\n    QUERO fazer login no site http://automationpractice.com/\n    PARA acessar a minha conta",
+    "line": 3,
+    "elements": [
+      {
+        "id": "login;acesso-válido;;2",
+        "keyword": "Esquema do Cenário",
+        "name": "Acesso válido",
+        "description": "",
+        "line": 19,
+        "type": "scenario",
+        "tags": [
+          {
+            "name": "@smoke",
+            "line": 8
+          },
+          {
+            "name": "@login",
+            "line": 8
+          }
+        ],
+        "before": [
+          {
+            "match": {
+              "location": "capybara-3.29.0/lib/capybara/cucumber.rb:14"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18522
+            }
+          },
+          {
+            "match": {
+              "location": "capybara-3.29.0/lib/capybara/cucumber.rb:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 18387
+            }
+          },
+          {
+            "match": {
+              "location": "features/support/hooks.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 984979528
+            }
+          }
+        ],
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu seja um usuário cadastrado:",
+            "line": 10,
+            "rows": [
+              {
+                "cells": [
+                  "email",
+                  "testeame@teste.com"
+                ]
+              },
+              {
+                "cells": [
+                  "password",
+                  "12345678"
+                ]
+              },
+              {
+                "cells": [
+                  "name",
+                  "Fabiana Mello"
+                ]
+              }
+            ],
+            "match": {
+              "location": "features/specs/login.feature:19"
+            },
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "keyword": "Quando ",
+            "name": "eu efetuo login no site",
+            "line": 14,
+            "match": {
+              "location": "features/specs/login.feature:19"
+            },
+            "result": {
+              "status": "undefined"
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "devo ser autenticado com sucesso",
+            "line": 15,
+            "match": {
+              "location": "features/specs/login.feature:19"
+            },
+            "result": {
+              "status": "undefined"
+            }
+          }
+        ],
+        "after": [
+          {
+            "match": {
+              "location": "capybara-3.29.0/lib/capybara/cucumber.rb:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 139268
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
