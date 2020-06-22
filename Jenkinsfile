@@ -1,16 +1,24 @@
-node {
-    checkout scm
-    docker.image('selenium/standalone-chrome-debug').withRun('-d -p 4444:4444 -p 59000:59000 -v /dev/shm:/dev/shm --privileged --name selenium') { c ->
-        docker.image('ruby').inside("--link ${c.id}:selenium") {
-            
-            sh 'bundle install'
-            
-            try{
-                sh 'bundle exec cucumber -p ci'
-            } finally {
-                cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'reports', sortingMethod: 'ALPHABETICAL'
+pipeline{
+    agent{
+        docker{
+            image 'qaninja/rubywd'
+        } 
+    }
+
+    stages{        
+        stage('Bundle'){
+            steps{
+                sh "bundle install"
             }
-                                  
+        }
+        stage('Run Features'){
+            steps{
+                try{
+                    sh "bundle exec cucumber -p ci"
+                } finally {
+                    cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'reports', sortingMethod: 'ALPHABETICAL'
+                }             
+            }
         }
     }
 }
