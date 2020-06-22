@@ -1,6 +1,6 @@
 node {
     checkout scm
-    docker.image('selenium/standalone-chrome').withRun('-d -p 4444:4444 -p 59000:59000 --privileged --name selenium') { c ->
+    docker.image('selenium/standalone-chrome-debug').withRun('-d -p 4444:4444 -p 59000:59000 -v /dev/shm:/dev/shm --privileged --name selenium') { c ->
         docker.image('ruby').inside("--link ${c.id}:selenium") {
             
             sh 'bundle install'
