@@ -6,7 +6,7 @@ node {
             sh 'bundle install'
             
             try{
-                sh 'bundle exec cucumber -p ci'
+                sh 'bundle exec cucumber -p prod'
             } finally {
                 cucumber fileIncludePattern: '**/*.json', jsonReportDirectory: 'reports', sortingMethod: 'ALPHABETICAL'
             }
