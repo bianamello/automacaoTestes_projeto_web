@@ -80,9 +80,9 @@ Projeto desenvolvido para testes de compra no site: http://www.automationpractic
 - Selecionar e Baixar
 - Após baixar, selecionar a opção para reiniciar o Jenkins
 
-- **Para rodar os testes no pipeline do Jenkins:**
-	- Clicar no Job criado e clicar em "Construir agora"
+**Para rodar os testes no pipeline do Jenkins:**
+- Clicar no Job criado e clicar em "Construir agora"
 
-- **Para agendar a execução do Job no Jenkins:**
-	- Nas configurações do Job em "Build Triggers" selecionar "Construir periodicamente"
-	- Digitar "H 9 * * 1-5" e salvar (configurado para rodar de segunda a sexta às 9h). 
+**Para agendar a execução do Job no Jenkins:**
+- Nas configurações do Job em "Build Triggers" selecionar "Construir periodicamente"
+- Digitar "H 9 * * 1-5" e salvar (configurado para rodar de segunda a sexta às 9h). 
