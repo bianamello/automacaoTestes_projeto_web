@@ -19,6 +19,7 @@ Projeto desenvolvido para testes de compra no site: http://www.automationpractic
 - [x] Possui relatório em formato html, com evidência dos testes (imagens) - Pasta reports
 - [x] Configurado para rodar no Chrome
 - [x] Configurado para rodar no Jenkins
+- [x] Configurado para gerar relatório no Jenkins
 
 
 ### Pré requisitos:
@@ -72,7 +73,8 @@ Projeto desenvolvido para testes de compra no site: http://www.automationpractic
 ### Para rodar os testes no Jenkins:
 
 - Criar um novo Job no Jenkins do tipo Pipeline;
-- Nas configurações selecionar "Pipeline script from SCM" e colocar a URL do projeto de testes: https://github.com/bianamello/projeto_web.git
+- Nas configurações de "Pipeline Definition" selecionar "Pipeline script from SCM" e "SCM" selecionar o "Git";
+- Colocar a URL do projeto de testes no "Repository URL": https://github.com/bianamello/projeto_web.git
 
 **Inserindo plugin Cucumber reports no Jenkins (O projeto está configurado no Jenkinsfile para gerar o relatório no Jenkins):**
 - Clicar em Gerenciar Jenkins/ Gerenciar plugins
