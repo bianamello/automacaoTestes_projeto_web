@@ -15,6 +15,7 @@ Projeto desenvolvido para testes de compra no site: http://www.automationpractic
 	- Cenário de testes para login válido;
 	- Cenário de testes para login inválido;
 	- Cenário de testes para login em branco;
+	- Cenário de testes de login criando nova conta;
 - [x] Desenvolvido no padrão page object
 - [x] Possui relatório em formato html, com evidência dos testes (imagens) - Pasta reports
 - [x] Configurado para rodar no Chrome
