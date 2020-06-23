@@ -1,5 +1,6 @@
 require 'capybara'
 require 'capybara/cucumber'
+require 'faker'
 require 'rspec'
 require 'selenium-webdriver'
 require 'site_prism'

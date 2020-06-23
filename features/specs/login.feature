@@ -33,3 +33,9 @@ Esquema do Cenário: Login inválido
         |                    | 12345678 | An email address required. |
         | testeame@teste.com |          | Password is required.      |
         |                    |          | An email address required. |
+
+@nova_conta
+Cenário: Login com uma nova conta
+    Dado que eu seja um usuário sem cadastro
+    Quando que eu crio uma nova conta no site
+    Então devo ser autenticado com meu novo usuário
