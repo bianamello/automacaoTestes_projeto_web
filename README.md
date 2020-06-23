@@ -74,15 +74,15 @@ Projeto desenvolvido para testes de compra no site: http://www.automationpractic
 - Criar um novo Job no Jenkins do tipo Pipeline;
 - Nas configurações selecionar "Pipeline script from SCM" e colocar a URL do projeto de testes: https://github.com/bianamello/projeto_web.git
 
-- **Inserindo plugin Cucumber reports no Jenkins (O projeto está configurado no Jenkinsfile para gerar o relatório no Jenkins):**
+**Inserindo plugin Cucumber reports no Jenkins (O projeto está configurado no Jenkinsfile para gerar o relatório no Jenkins):**
 - Clicar em Gerenciar Jenkins/ Gerenciar plugins
 - Clicar em Disponíveis e filtrar por "cucumber reports"
 - Selecionar e Baixar
 - Após baixar, selecionar a opção para reiniciar o Jenkins
 
 - **Para rodar os testes no pipeline do Jenkins:**
-- Clicar no Job criado e clicar em "Construir agora"
+	- Clicar no Job criado e clicar em "Construir agora"
 
 - **Para agendar a execução do Job no Jenkins:**
-- Nas configurações do Job em "Build Triggers" selecionar "Construir periodicamente"
-- Digitar "H 9 * * 1-5" e salvar (configurado para rodar de segunda a sexta às 9h). 
+	- Nas configurações do Job em "Build Triggers" selecionar "Construir periodicamente"
+	- Digitar "H 9 * * 1-5" e salvar (configurado para rodar de segunda a sexta às 9h). 
